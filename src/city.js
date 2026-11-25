@@ -376,7 +376,7 @@ export function mountCity(host, overlay, onSelect) {
     const height = host.clientHeight;
     if (!width || !height) return;
     const aspect = width/height;
-    const half = Math.max(14,distance/(2*Math.max(.6,aspect)));
+    const half = distance*Math.max(.4,1/(2*Math.max(.6,aspect)));
     Object.assign(camera,{left:-half*aspect,right:half*aspect,top:half,bottom:-half});
     camera.updateProjectionMatrix();
     renderer.setSize(width,height);
