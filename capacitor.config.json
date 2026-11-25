@@ -1,0 +1,6 @@
+{
+  "appId": "fr.jules73.mipolune",
+  "appName": "Mipolune Tycoon",
+  "webDir": "dist",
+  "ios": {"contentInset": "never"}
+}
