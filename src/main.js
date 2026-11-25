@@ -169,8 +169,8 @@ document.addEventListener('click',event=>{
   const {action,index}=button.dataset;
   if(!action) return;
   if(action==='select') {
-    select(Number(index));
     sheet.close();
+    select(Number(index));
     return;
   }
   const now=Date.now();

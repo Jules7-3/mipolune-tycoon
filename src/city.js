@@ -21,7 +21,8 @@ function makeBatch() {
       transform.rotation.set(0,rotation,tilt);
       transform.updateMatrix();
       if (!parts.has(material)) parts.set(material,[]);
-      parts.get(material).push(geometry.clone().applyMatrix4(transform.matrix));
+      const part = geometry.index ? geometry.toNonIndexed() : geometry.clone();
+      parts.get(material).push(part.applyMatrix4(transform.matrix));
     },
     finish(shadow=true) {
       const group = new T.Group();
